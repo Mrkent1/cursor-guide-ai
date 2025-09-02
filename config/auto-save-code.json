@@ -1,0 +1,56 @@
+{
+  "// AUTO SAVE CODE CONFIG - CHO ANH NGHĨA": "Code em tạo tự động lưu vào file, không cần tick keep",
+  
+  "// === AUTO SAVE CODE SETTINGS ==="": "",
+  "autoSaveCode": {
+    "enabled": true,
+    "autoAccept": true,
+    "autoWrite": true,
+    "skipConfirmation": true,
+    "immediateSave": true,
+    "noUserInteraction": true
+  },
+  
+  "// === CURSOR AI SETTINGS ==="": "",
+  "cursor.ai": {
+    "autoAcceptSuggestions": true,
+    "autoApplyChanges": true,
+    "skipUserConfirmation": true,
+    "immediateExecution": true,
+    "noPromptRequired": true
+  },
+  
+  "// === FILE OPERATIONS ==="": "",
+  "fileOperations": {
+    "autoCreateFiles": true,
+    "autoWriteContent": true,
+    "autoSaveAfterWrite": true,
+    "skipFileDialogs": true,
+    "immediateFileCreation": true
+  },
+  
+  "// === WORKFLOW OPTIMIZATION ==="": "",
+  "workflow": {
+    "phase1": "Em tạo code",
+    "phase2": "Tự động lưu vào file local",
+    "phase3": "Không cần anh tick keep",
+    "phase4": "Anh chỉ cần xem kết quả"
+  },
+  
+  "// === USER EXPERIENCE ==="": "",
+  "userExperience": {
+    "noClicking": true,
+    "noTicking": true,
+    "noConfirmation": true,
+    "seamlessWorkflow": true,
+    "oneClickSolution": true
+  },
+  
+  "// === IMPLEMENTATION ==="": "",
+  "implementation": {
+    "method": "Direct file write",
+    "bypass": "Cursor UI confirmation",
+    "action": "Auto save to project",
+    "result": "Code available immediately"
+  }
+}

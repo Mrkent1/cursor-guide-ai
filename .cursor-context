@@ -1,0 +1,33 @@
+# CURSOR CONTEXT - DỰ ÁN CỦA ANH NGHĨA
+
+## THÔNG TIN CÁ NHÂN
+- Tên: Anh Nghĩa
+- Khả năng: Không biết code, không biết tiếng Anh
+- Giao tiếp: 100% tiếng Việt
+- Yêu cầu: AI chủ động gợi ý, không thụ động
+
+## DỰ ÁN HIỆN TẠI
+- Tên: Cursor Guide Project
+- Mục đích: Hướng dẫn sử dụng Cursor IDE
+- Giai đoạn: Đang tối ưu hóa và cấu hình
+- Tech stack: Python, Markdown, JSON
+
+## VẤN ĐỀ ĐANG GẶP
+1. AI mất context khi chuyển tab
+2. CPU/RAM cao, cần tối ưu
+3. Agent mode bị timeout và tạo file trùng lặp
+4. Cần AI chủ động hướng dẫn
+
+## QUY TRÌNH LÀM VIỆC
+1. AI chủ động gợi ý ý tưởng
+2. AI tạo cấu trúc dự án hoàn chỉnh
+3. AI duy trì ngữ cảnh qua file này
+4. AI chạy code thông minh, không bị loading
+
+## LƯU Ý QUAN TRỌNG
+- KHÔNG được thụ động chờ anh ra lệnh
+- PHẢI chủ động gợi ý và hướng dẫn
+- LUÔN kiểm tra file đã tồn tại trước khi tạo mới
+- SỬ DỤNG workspace để lưu context
+- AUTO SAVE: Tự động lưu mọi thay đổi
+- AUTO CODE: Tự động tạo code từ mô tả text

@@ -1,0 +1,86 @@
+{
+  "// AI WORKFLOW CONFIG - CHO ANH NGHĨA": "Cấu hình quy trình AI chủ động",
+  
+  "// === QUY TRÌNH LÀM VIỆC ==="": "",
+  "workflow": {
+    "phase1": "AI chủ động gợi ý ý tưởng",
+    "phase2": "AI tạo cấu trúc dự án hoàn chỉnh", 
+    "phase3": "AI duy trì ngữ cảnh qua .cursor-context",
+    "phase4": "AI chạy code thông minh, không bị loading"
+  },
+  
+  "// === AUTO SAVE CONFIG ==="": "",
+  "autoSave": {
+    "enabled": true,
+    "delay": 500,
+    "formatOnSave": true,
+    "trimWhitespace": true,
+    "insertFinalNewline": true
+  },
+  
+  "// === AUTO CODE GENERATION ==="": "",
+  "autoCode": {
+    "enabled": true,
+    "fromTextDescription": true,
+    "autoComplete": true,
+    "suggestions": true,
+    "contextAware": true
+  },
+  
+  "// === AI BEHAVIOR ==="": "",
+  "aiBehavior": {
+    "proactive": true,
+    "suggestIdeas": true,
+    "guideWorkflow": true,
+    "maintainContext": true,
+    "checkExistingFiles": true,
+    "avoidDuplicates": true
+  },
+  
+  "// === TASK BREAKDOWN ==="": "",
+  "taskBreakdown": {
+    "enabled": true,
+    "maxTaskSize": "medium",
+    "autoSplit": true,
+    "progressTracking": true,
+    "contextPreservation": true
+  },
+  
+  "// === ERROR HANDLING ==="": "",
+  "errorHandling": {
+    "autoRetry": true,
+    "maxRetries": 3,
+    "timeoutHandling": true,
+    "gracefulDegradation": true,
+    "userNotification": true
+  },
+  
+  "// === CONTEXT MANAGEMENT ==="": "",
+  "contextManagement": {
+    "persistentContext": true,
+    "contextFile": ".cursor-context",
+    "workspaceContext": true,
+    "sessionContext": true,
+    "projectContext": true
+  },
+  
+  "// === PERFORMANCE OPTIMIZATION ==="": "",
+  "performance": {
+    "maxTokens": 2000,
+    "contextLines": 20,
+    "temperature": 0.7,
+    "model": "claude-3.5-sonnet",
+    "memoryOptimization": true,
+    "cpuOptimization": true
+  },
+  
+  "// === USER PREFERENCES ==="": "",
+  "userPreferences": {
+    "language": "vietnamese",
+    "skillLevel": "beginner",
+    "communicationStyle": "proactive",
+    "guidanceLevel": "detailed",
+    "autoSave": true,
+    "autoCode": true
+  }
+}

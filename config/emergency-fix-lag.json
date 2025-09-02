@@ -1,0 +1,100 @@
+{
+  "// EMERGENCY FIX LAG - KHÔNG MẤT NGỮ CẢNH": "Dành cho anh Nghĩa - đang bị lag liên tục",
+  
+  "// === REFRESH KHÔNG MẤT NGỮ CẢNH ==="": "",
+  "refresh": {
+    "preserveContext": true,
+    "preserveChatHistory": true,
+    "preserveWorkspace": true,
+    "preserveSettings": true,
+    "softRestart": true
+  },
+  
+  "// === TỐI ƯU TỨC THỜI ==="": "",
+  "immediate": {
+    "disableAllExtensions": true,
+    "disableAutoUpdate": true,
+    "disableBackgroundSync": true,
+    "disableFileWatcher": true,
+    "disableGitIntegration": true,
+    "disableTelemetry": true,
+    "disableCrashReporting": true
+  },
+  
+  "// === GIẢM TẢI CPU/RAM ==="": "",
+  "performance": {
+    "maxMemoryUsage": "512MB",
+    "maxCPUUsage": "50%",
+    "disableAnimations": true,
+    "disableTransitions": true,
+    "disableSmoothScrolling": true,
+    "reduceMotion": true,
+    "compactMode": true
+  },
+  
+  "// === TỐI ƯU CHAT ==="": "",
+  "chat": {
+    "maxHistoryLength": 10,
+    "disableStreaming": true,
+    "disableTypingIndicator": true,
+    "disableAutoScroll": true,
+    "compactLayout": true,
+    "reduceFontSize": true
+  },
+  
+  "// === TỐI ƯU AI ==="": "",
+  "ai": {
+    "maxTokens": 500,
+    "contextLines": 5,
+    "disableContext": false,
+    "disableMemory": false,
+    "disableLearning": true,
+    "disableCaching": false
+  },
+  
+  "// === TỐI ƯU UI ==="": "",
+  "ui": {
+    "disableMinimap": true,
+    "disableBreadcrumbs": true,
+    "disableOutline": true,
+    "disableProblems": true,
+    "disableTimeline": true,
+    "disableActivityBar": false,
+    "disableStatusBar": false
+  },
+  
+  "// === TỐI ƯU FILE ==="": "",
+  "files": {
+    "disableAutoSave": false,
+    "autoSaveDelay": 2000,
+    "disableFileWatcher": true,
+    "disableSearch": true,
+    "disableIntelliSense": true,
+    "disableCodeLens": true
+  },
+  
+  "// === TỐI ƯU TERMINAL ==="": "",
+  "terminal": {
+    "disableIntegratedTerminal": true,
+    "disableExternalTerminal": false,
+    "disableShellIntegration": true
+  },
+  
+  "// === TỐI ƯU GIT ==="": "",
+  "git": {
+    "disableGit": true,
+    "disableGitLens": true,
+    "disableGitHistory": true,
+    "disableGitBlame": true
+  },
+  
+  "// === TỐI ƯU EXTENSIONS ==="": "",
+  "extensions": {
+    "disableAll": true,
+    "enableOnly": [
+      "ms-python.python"
+    ],
+    "disableAutoUpdate": true,
+    "disableRecommendations": true
+  }
+}

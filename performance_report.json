@@ -1,0 +1,10 @@
+{
+  "runtime": 1.0004816055297852,
+  "metrics": [
+    {
+      "timestamp": "2025-09-02T14:45:20.060629",
+      "name": "test_metric",
+      "value": 42
+    }
+  ]
+}

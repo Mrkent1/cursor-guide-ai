@@ -1,0 +1,47 @@
+{
+  "// FIX CHAT LAG - TỐI ƯU CỬA SỔ CHAT": "Dành cho anh Nghĩa - đang bị lag",
+  
+  "// === TỐI ƯU CHAT PANEL ==="": "",
+  "chat": {
+    "maxHistoryLength": 50,
+    "autoScroll": false,
+    "showTimestamps": false,
+    "compactMode": true,
+    "disableAnimations": true,
+    "reduceMotion": true
+  },
+  
+  "// === TỐI ƯU AI RESPONSE ==="": "",
+  "ai": {
+    "streamingResponse": false,
+    "maxResponseLength": 1000,
+    "responseDelay": 100,
+    "chunkSize": 200,
+    "disableTypingIndicator": true
+  },
+  
+  "// === TỐI ƯU UI ==="": "",
+  "ui": {
+    "disableSmoothScrolling": true,
+    "disableTransitions": true,
+    "reduceAnimations": true,
+    "compactLayout": true,
+    "hideUnnecessaryElements": true
+  },
+  
+  "// === TỐI ƯU MEMORY ==="": "",
+  "memory": {
+    "maxChatHistory": 20,
+    "clearHistoryOnRestart": true,
+    "disableAutoSave": false,
+    "reduceContextSize": true
+  },
+  
+  "// === TỐI ƯU PERFORMANCE ==="": "",
+  "performance": {
+    "disableRealTimeUpdates": true,
+    "reducePollingFrequency": true,
+    "limitConcurrentRequests": 1,
+    "disableBackgroundProcessing": true
+  }
+}

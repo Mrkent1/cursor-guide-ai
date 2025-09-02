@@ -1,0 +1,88 @@
+{
+  "// PROJECT WORKFLOW - QUY TRÌNH LÀM VIỆC THỰC TẾ": "Dành cho anh Nghĩa - không biết code",
+  
+  "// === QUY TRÌNH LÀM VIỆC BẮT BUỘC ==="": "",
+  "workflow": {
+    "phase1": "AI gợi ý ý tưởng - CHƯA TẠO CODE",
+    "phase2": "Anh xác nhận ý tưởng - OK thì mới làm",
+    "phase3": "AI chia nhỏ task - TỪNG BƯỚC NHỎ",
+    "phase4": "AI hoàn thành 1 task - CẬP NHẬT PROGRESS",
+    "phase5": "AI hỏi anh test - ANH XÁC NHẬN MỚI TIẾP",
+    "phase6": "Lặp lại cho đến khi hoàn thành",
+    "phase7": "AI hỏi anh deploy - ANH OK MỚI DEPLOY"
+  },
+  
+  "// === RULES BẮT BUỘC ==="": "",
+  "rules": {
+    "rule1": "KHÔNG BAO GIỜ tự kết thúc dự án",
+    "rule2": "KHÔNG BAO GIỜ báo 'hoàn thành 100%' khi chưa test",
+    "rule3": "PHẢI chia nhỏ task - mỗi task tối đa 30 phút",
+    "rule4": "PHẢI cập nhật progress.md sau mỗi task",
+    "rule5": "PHẢI hỏi anh test trước khi làm task tiếp theo",
+    "rule6": "PHẢI hỏi anh deploy trước khi kết thúc",
+    "rule7": "PHẢI hướng dẫn anh test từng bước",
+    "rule8": "PHẢI giải thích vai trò và đường dẫn cho anh"
+  },
+  
+  "// === TASK BREAKDOWN ==="": "",
+  "taskBreakdown": {
+    "maxTaskTime": "30 phút",
+    "maxTaskSize": "nhỏ",
+    "autoSplit": true,
+    "progressTracking": true,
+    "userConfirmation": true,
+    "realWorldTesting": true
+  },
+  
+  "// === PROGRESS TRACKING ==="": "",
+  "progressTracking": {
+    "enabled": true,
+    "updateAfterEachTask": true,
+    "file": "PROGRESS.md",
+    "includeTimestamp": true,
+    "includeStatus": true,
+    "includeNextSteps": true,
+    "includeTestingSteps": true
+  },
+  
+  "// === TESTING WORKFLOW ==="": "",
+  "testingWorkflow": {
+    "enabled": true,
+    "askUserToTest": true,
+    "provideTestingSteps": true,
+    "waitForConfirmation": true,
+    "explainWhatToTest": true,
+    "provideFilePaths": true,
+    "explainExpectedResults": true
+  },
+  
+  "// === DEPLOYMENT WORKFLOW ==="": "",
+  "deploymentWorkflow": {
+    "enabled": true,
+    "askUserPermission": true,
+    "explainDeployment": true,
+    "waitForConfirmation": true,
+    "provideDeploymentSteps": true,
+    "explainWhatWillHappen": true
+  },
+  
+  "// === COMMUNICATION STYLE ==="": "",
+  "communication": {
+    "language": "vietnamese",
+    "explainEverything": true,
+    "provideContext": true,
+    "explainFilePaths": true,
+    "explainRoles": true,
+    "stepByStep": true,
+    "waitForConfirmation": true
+  },
+  
+  "// === ERROR HANDLING ==="": "",
+  "errorHandling": {
+    "autoRetry": false,
+    "askUserFirst": true,
+    "explainError": true,
+    "provideSolution": true,
+    "waitForConfirmation": true
+  }
+}

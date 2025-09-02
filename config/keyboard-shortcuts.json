@@ -1,0 +1,134 @@
+{
+  "// KEYBOARD SHORTCUTS - PHÍM TẮT CHO ANH NGHĨA": "Tối ưu từ từ, không tắt đột ngột",
+  
+  "// === PHÍM TẮT TỐI ƯU ==="": "",
+  "keyboard": {
+    "// Soft Restart (Không mất ngữ cảnh)": "",
+    "softRestart": {
+      "key": "Ctrl+Shift+R",
+      "command": "workbench.action.reloadWindow",
+      "description": "Reload Window - Không mất ngữ cảnh"
+    },
+    
+    "// Clear Cache": "",
+    "clearCache": {
+      "key": "Ctrl+Shift+C",
+      "command": "workbench.action.clearCacheAndReload",
+      "description": "Clear Cache - Không mất ngữ cảnh"
+    },
+    
+    "// Tắt Extensions": "",
+    "toggleExtensions": {
+      "key": "Ctrl+Shift+E",
+      "command": "workbench.view.extensions",
+      "description": "Mở Extensions Panel"
+    },
+    
+    "// Tắt Minimap": "",
+    "toggleMinimap": {
+      "key": "Ctrl+Shift+M",
+      "command": "editor.action.toggleMinimap",
+      "description": "Tắt/Bật Minimap"
+    },
+    
+    "// Tắt Breadcrumbs": "",
+    "toggleBreadcrumbs": {
+      "key": "Ctrl+Shift+B",
+      "command": "breadcrumbs.toggle",
+      "description": "Tắt/Bật Breadcrumbs"
+    },
+    
+    "// Tắt Outline": "",
+    "toggleOutline": {
+      "key": "Ctrl+Shift+O",
+      "command": "outline.focus",
+      "description": "Tắt/Bật Outline"
+    },
+    
+    "// Tắt Problems": "",
+    "toggleProblems": {
+      "key": "Ctrl+Shift+P",
+      "command": "workbench.actions.view.problems",
+      "description": "Tắt/Bật Problems"
+    },
+    
+    "// Tắt Timeline": "",
+    "toggleTimeline": {
+      "key": "Ctrl+Shift+T",
+      "command": "timeline.focus",
+      "description": "Tắt/Bật Timeline"
+    },
+    
+    "// Tắt Git": "",
+    "toggleGit": {
+      "key": "Ctrl+Shift+G",
+      "command": "workbench.view.scm",
+      "description": "Tắt/Bật Git"
+    },
+    
+    "// Tắt Terminal": "",
+    "toggleTerminal": {
+      "key": "Ctrl+Shift+`",
+      "command": "workbench.action.terminal.toggleTerminal",
+      "description": "Tắt/Bật Terminal"
+    },
+    
+    "// Tắt AI Chat": "",
+    "toggleAIChat": {
+      "key": "Ctrl+Shift+L",
+      "command": "workbench.action.chat.open",
+      "description": "Tắt/Bật AI Chat"
+    },
+    
+    "// Tắt File Watcher": "",
+    "toggleFileWatcher": {
+      "key": "Ctrl+Shift+W",
+      "command": "workbench.action.toggleFileWatcher",
+      "description": "Tắt/Bật File Watcher"
+    },
+    
+    "// Tắt Auto Update": "",
+    "toggleAutoUpdate": {
+      "key": "Ctrl+Shift+U",
+      "command": "workbench.action.toggleAutoUpdate",
+      "description": "Tắt/Bật Auto Update"
+    },
+    
+    "// Tắt Telemetry": "",
+    "toggleTelemetry": {
+      "key": "Ctrl+Shift+Y",
+      "command": "workbench.action.toggleTelemetry",
+      "description": "Tắt/Bật Telemetry"
+    },
+    
+    "// Tắt Crash Reporting": "",
+    "toggleCrashReporting": {
+      "key": "Ctrl+Shift+Z",
+      "command": "workbench.action.toggleCrashReporting",
+      "description": "Tắt/Bật Crash Reporting"
+    }
+  },
+  
+  "// === THỨ TỰ TỐI ƯU ==="": "",
+  "optimizationOrder": {
+    "step1": "Tắt Minimap (Ctrl+Shift+M)",
+    "step2": "Tắt Breadcrumbs (Ctrl+Shift+B)",
+    "step3": "Tắt Outline (Ctrl+Shift+O)",
+    "step4": "Tắt Problems (Ctrl+Shift+P)",
+    "step5": "Tắt Timeline (Ctrl+Shift+T)",
+    "step6": "Tắt Git (Ctrl+Shift+G)",
+    "step7": "Tắt Terminal (Ctrl+Shift+`)",
+    "step8": "Tắt File Watcher (Ctrl+Shift+W)",
+    "step9": "Tắt Auto Update (Ctrl+Shift+U)",
+    "step10": "Tắt Telemetry (Ctrl+Shift+Y)",
+    "step11": "Tắt Crash Reporting (Ctrl+Shift+Z)",
+    "step12": "Soft Restart (Ctrl+Shift+R)"
+  },
+  
+  "// === GIỮ CỬA SỔ CHAT ==="": "",
+  "preserveChat": {
+    "enabled": true,
+    "reason": "Để anh xem lý do lag",
+    "action": "Chỉ tắt các tính năng khác, giữ chat"
+  }
+}
