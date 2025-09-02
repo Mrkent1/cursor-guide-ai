@@ -43,28 +43,28 @@ def debug_function(func):
     def wrapper(*args, **kwargs):
         logger.info(f"🔍 Bắt đầu function: {func.__name__}")
         logger.debug(f"📥 Arguments: args={args}, kwargs={kwargs}")
-        
+
         start_time = time.time()
         try:
             result = func(*args, **kwargs)
             end_time = time.time()
-            
+
             logger.info(f"✅ Function {func.__name__} hoàn thành")
             logger.debug(f"📤 Result: {result}")
             logger.debug(f"⏱️ Thời gian: {end_time - start_time:.2f} giây")
-            
+
             return result
-            
+
         except Exception as e:
             end_time = time.time()
-            
+
             logger.error(f"❌ Lỗi trong function {func.__name__}")
             logger.error(f"🐛 Error: {str(e)}")
             logger.error(f"📍 Traceback: {traceback.format_exc()}")
             logger.error(f"⏱️ Thời gian trước khi lỗi: {end_time - start_time:.2f} giây")
-            
+
             raise e
-    
+
     return wrapper
 
 def monitor_performance(func):
@@ -73,18 +73,18 @@ def monitor_performance(func):
     def wrapper(*args, **kwargs):
         start_time = time.time()
         start_memory = get_memory_usage()
-        
+
         result = func(*args, **kwargs)
-        
+
         end_time = time.time()
         end_memory = get_memory_usage()
-        
+
         print(f"📊 Performance {func.__name__}:")
         print(f"   ⏱️ Thời gian: {end_time - start_time:.2f} giây")
         print(f"   💾 RAM: {end_memory - start_memory:.2f} MB")
-        
+
         return result
-    
+
     return wrapper
 
 def get_memory_usage():
@@ -103,19 +103,19 @@ def auto_fix_common_errors(code):
         ('import sqlite3', 'import sqlite3'),
         ('import requests', 'import requests'),
         ('import json', 'import json'),
-        
+
         # Syntax errors
         ('print\\(([^)]+)\\)', 'print(\\1)'),
         ('def ([^(]+)\\(([^)]*)\\):', 'def \\1(\\2):'),
-        
+
         # Common fixes
         ('\\n\\n\\n+', '\\n\\n'),  # Remove multiple newlines
         ('    +$', ''),  # Remove trailing spaces
     ]
-    
+
     for pattern, replacement in fixes:
         code = code.replace(pattern, replacement)
-    
+
     return code
 
 def create_error_report(error, context=""):
@@ -130,26 +130,26 @@ def create_error_report(error, context=""):
 
 🔧 SUGGESTED FIXES:
 """
-    
+
     # Phân tích lỗi và đề xuất sửa
     error_str = str(error).lower()
-    
+
     if 'import' in error_str:
         report += "- Kiểm tra import statements\\n"
         report += "- Cài đặt thư viện thiếu: pip install [package]\\n"
-    
+
     if 'syntax' in error_str:
         report += "- Kiểm tra syntax Python\\n"
         report += "- Kiểm tra dấu ngoặc đơn, ngoặc kép\\n"
-    
+
     if 'attribute' in error_str:
         report += "- Kiểm tra tên biến, function\\n"
         report += "- Kiểm tra object có method đó không\\n"
-    
+
     if 'key' in error_str:
         report += "- Kiểm tra key trong dictionary\\n"
         report += "- Thêm key vào dictionary\\n"
-    
+
     report += f"""
 📋 DEBUG INFO:
 - Python version: {sys.version}
@@ -162,16 +162,16 @@ def create_error_report(error, context=""):
 3. Test lại code
 4. Báo AI Cipher nếu cần hỗ trợ
 """
-    
+
     return report
 
 def save_error_report(error, context=""):
     """Lưu báo cáo lỗi vào file"""
     report = create_error_report(error, context)
-    
+
     with open('error_report.txt', 'w', encoding='utf-8') as f:
         f.write(report)
-    
+
     print("📄 Đã lưu error report vào error_report.txt")
     return report
 
@@ -205,21 +205,21 @@ from debug_utils import debug_function, monitor_performance
 
 class TestFramework:
     """Framework test tự động"""
-    
+
     def __init__(self):
         self.tests = []
         self.passed = 0
         self.failed = 0
-    
+
     def add_test(self, name, test_func):
         """Thêm test case"""
         self.tests.append((name, test_func))
-    
+
     def run_tests(self):
         """Chạy tất cả tests"""
         print("🧪 BẮT ĐẦU CHẠY TESTS...")
         print("="*50)
-        
+
         for name, test_func in self.tests:
             try:
                 print(f"🔍 Test: {name}")
@@ -230,15 +230,15 @@ class TestFramework:
                 print(f"❌ FAILED: {name}")
                 print(f"   Error: {str(e)}")
                 self.failed += 1
-        
+
         print("="*50)
         print(f"📊 KẾT QUẢ: {self.passed} passed, {self.failed} failed")
-        
+
         if self.failed == 0:
             print("🎉 TẤT CẢ TESTS PASSED!")
         else:
             print("⚠️ CÓ TESTS FAILED!")
-        
+
         return self.failed == 0
 
 # Tạo test cases tự động
@@ -264,10 +264,10 @@ def test_basic_functionality():
     """Test chức năng cơ bản"""
     if app is None:
         raise Exception("Module app không tồn tại")
-    
+
     # Test import thành công
     assert hasattr(app, '__file__'), "Module app không có __file__"
-    
+
     # Test các function chính
     if hasattr(app, 'main'):
         result = app.main()
@@ -287,23 +287,23 @@ def test_performance():
     """Test performance"""
     # Test thời gian chạy
     import time
-    
+
     start_time = time.time()
     # Thêm code test performance
     end_time = time.time()
-    
+
     execution_time = end_time - start_time
     assert execution_time < 5.0, f"Code chạy quá chậm: {execution_time:.2f}s"
 
 def run_all_tests():
     """Chạy tất cả tests"""
     framework = TestFramework()
-    
+
     # Thêm tests
     framework.add_test("Basic Functionality", test_basic_functionality)
     framework.add_test("Error Handling", test_error_handling)
     framework.add_test("Performance", test_performance)
-    
+
     # Chạy tests
     return framework.run_tests()
 
@@ -333,12 +333,12 @@ from datetime import datetime
 
 class PerformanceMonitor:
     """Monitor performance của ứng dụng"""
-    
+
     def __init__(self):
         self.start_time = time.time()
         self.start_memory = self.get_memory_usage()
         self.metrics = []
-    
+
     def get_memory_usage(self):
         """Lấy memory usage"""
         try:
@@ -346,14 +346,14 @@ class PerformanceMonitor:
             return process.memory_info().rss / 1024 / 1024  # MB
         except:
             return 0
-    
+
     def get_cpu_usage(self):
         """Lấy CPU usage"""
         try:
             return psutil.cpu_percent()
         except:
             return 0
-    
+
     def record_metric(self, name, value):
         """Ghi lại metric"""
         self.metrics.append({
@@ -361,13 +361,13 @@ class PerformanceMonitor:
             'name': name,
             'value': value
         })
-    
+
     def get_performance_report(self):
         """Tạo báo cáo performance"""
         current_time = time.time()
         current_memory = self.get_memory_usage()
         current_cpu = self.get_cpu_usage()
-        
+
         report = {
             'runtime': current_time - self.start_time,
             'memory_usage': current_memory,
@@ -375,29 +375,29 @@ class PerformanceMonitor:
             'cpu_usage': current_cpu,
             'metrics': self.metrics
         }
-        
+
         return report
-    
+
     def save_report(self, filename='performance_report.json'):
         """Lưu báo cáo"""
         report = self.get_performance_report()
-        
+
         with open(filename, 'w') as f:
             json.dump(report, f, indent=2)
-        
+
         print(f"📊 Đã lưu performance report vào {filename}")
         return report
 
 # Sử dụng
 if __name__ == "__main__":
     monitor = PerformanceMonitor()
-    
+
     # Simulate some work
     time.sleep(1)
-    
+
     # Record metrics
     monitor.record_metric('test_metric', 42)
-    
+
     # Generate report
     report = monitor.save_report()
     print("📊 Performance Report:")
@@ -413,11 +413,11 @@ if __name__ == "__main__":
 // Chạy auto debug
 function runAutoDebug() {
     console.log('🐛 BẮT ĐẦU TẠO DEBUG TOOLS...');
-    
+
     createDebugUtils();
     createTestFramework();
     createPerformanceMonitor();
-    
+
     console.log('');
     console.log('🎉 HOÀN THÀNH AUTO DEBUG SETUP!');
     console.log('');

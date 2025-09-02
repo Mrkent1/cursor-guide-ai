@@ -36,26 +36,26 @@ def debug_function(func):
     """Decorator để debug function"""
     def wrapper(*args, **kwargs):
         logger.info(f"🔍 Bắt đầu function: {func.__name__}")
-        
+
         start_time = time.time()
         try:
             result = func(*args, **kwargs)
             end_time = time.time()
-            
+
             logger.info(f"✅ Function {func.__name__} hoàn thành")
             logger.debug(f"⏱️ Thời gian: {end_time - start_time:.2f} giây")
-            
+
             return result
-            
+
         except Exception as e:
             end_time = time.time()
-            
+
             logger.error(f"❌ Lỗi trong function {func.__name__}")
             logger.error(f"🐛 Error: {str(e)}")
             logger.error(f"📍 Traceback: {traceback.format_exc()}")
-            
+
             raise e
-    
+
     return wrapper
 
 def create_error_report(error, context=""):
@@ -80,16 +80,16 @@ def create_error_report(error, context=""):
 3. Test lại code
 4. Báo AI Cipher nếu cần hỗ trợ
 """
-    
+
     return report
 
 def save_error_report(error, context=""):
     """Lưu báo cáo lỗi vào file"""
     report = create_error_report(error, context)
-    
+
     with open('error_report.txt', 'w', encoding='utf-8') as f:
         f.write(report)
-    
+
     print("📄 Đã lưu error report vào error_report.txt")
     return report
 
@@ -110,21 +110,21 @@ Test Framework - Tự động tạo bởi AI Cipher
 
 class TestFramework:
     """Framework test tự động"""
-    
+
     def __init__(self):
         self.tests = []
         self.passed = 0
         self.failed = 0
-    
+
     def add_test(self, name, test_func):
         """Thêm test case"""
         self.tests.append((name, test_func))
-    
+
     def run_tests(self):
         """Chạy tất cả tests"""
         print("🧪 BẮT ĐẦU CHẠY TESTS...")
         print("="*50)
-        
+
         for name, test_func in self.tests:
             try:
                 print(f"🔍 Test: {name}")
@@ -135,15 +135,15 @@ class TestFramework:
                 print(f"❌ FAILED: {name}")
                 print(f"   Error: {str(e)}")
                 self.failed += 1
-        
+
         print("="*50)
         print(f"📊 KẾT QUẢ: {self.passed} passed, {self.failed} failed")
-        
+
         if self.failed == 0:
             print("🎉 TẤT CẢ TESTS PASSED!")
         else:
             print("⚠️ CÓ TESTS FAILED!")
-        
+
         return self.failed == 0
 
 # Test cases đơn giản
@@ -163,11 +163,11 @@ def test_error_handling():
 def run_all_tests():
     """Chạy tất cả tests"""
     framework = TestFramework()
-    
+
     # Thêm tests
     framework.add_test("Basic Test", test_basic)
     framework.add_test("Error Handling", test_error_handling)
-    
+
     # Chạy tests
     return framework.run_tests()
 
@@ -190,11 +190,11 @@ from datetime import datetime
 
 class PerformanceMonitor:
     """Monitor performance của ứng dụng"""
-    
+
     def __init__(self):
         self.start_time = time.time()
         self.metrics = []
-    
+
     def record_metric(self, name, value):
         """Ghi lại metric"""
         self.metrics.append({
@@ -202,38 +202,38 @@ class PerformanceMonitor:
             'name': name,
             'value': value
         })
-    
+
     def get_performance_report(self):
         """Tạo báo cáo performance"""
         current_time = time.time()
-        
+
         report = {
             'runtime': current_time - self.start_time,
             'metrics': self.metrics
         }
-        
+
         return report
-    
+
     def save_report(self, filename='performance_report.json'):
         """Lưu báo cáo"""
         report = self.get_performance_report()
-        
+
         with open(filename, 'w') as f:
             json.dump(report, f, indent=2)
-        
+
         print(f"📊 Đã lưu performance report vào {filename}")
         return report
 
 # Sử dụng
 if __name__ == "__main__":
     monitor = PerformanceMonitor()
-    
+
     # Simulate some work
     time.sleep(1)
-    
+
     # Record metrics
     monitor.record_metric('test_metric', 42)
-    
+
     # Generate report
     report = monitor.save_report()
     print("📊 Performance Report:")
@@ -244,13 +244,13 @@ if __name__ == "__main__":
 try {
     fs.writeFileSync('debug_utils.py', debugUtilsContent);
     console.log('✅ Đã tạo debug_utils.py');
-    
+
     fs.writeFileSync('test_framework.py', testFrameworkContent);
     console.log('✅ Đã tạo test_framework.py');
-    
+
     fs.writeFileSync('performance_monitor.py', performanceContent);
     console.log('✅ Đã tạo performance_monitor.py');
-    
+
     console.log('');
     console.log('🎉 HOÀN THÀNH AUTO DEBUG SETUP!');
     console.log('');
@@ -264,7 +264,7 @@ try {
     console.log('2. Sử dụng @debug_function decorator');
     console.log('3. Chạy python test_framework.py để test');
     console.log('4. Sử dụng PerformanceMonitor để monitor');
-    
+
 } catch (error) {
     console.error('❌ Lỗi khi tạo files:', error.message);
 }

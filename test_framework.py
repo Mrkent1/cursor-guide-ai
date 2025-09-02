@@ -8,21 +8,21 @@ import sys
 
 class TestFramework:
     """Framework test tự động"""
-    
+
     def __init__(self):
         self.tests = []
         self.passed = 0
         self.failed = 0
-    
+
     def add_test(self, name, test_func):
         """Thêm test case"""
         self.tests.append((name, test_func))
-    
+
     def run_tests(self):
         """Chạy tất cả tests"""
         print("🧪 BẮT ĐẦU CHẠY TESTS...")
         print("="*50)
-        
+
         for name, test_func in self.tests:
             try:
                 print(f"🔍 Test: {name}")
@@ -33,15 +33,15 @@ class TestFramework:
                 print(f"❌ FAILED: {name}")
                 print(f"   Error: {str(e)}")
                 self.failed += 1
-        
+
         print("="*50)
         print(f"📊 KẾT QUẢ: {self.passed} passed, {self.failed} failed")
-        
+
         if self.failed == 0:
             print("🎉 TẤT CẢ TESTS PASSED!")
         else:
             print("⚠️ CÓ TESTS FAILED!")
-        
+
         return self.failed == 0
 
 # Test cases đơn giản
@@ -61,11 +61,11 @@ def test_error_handling():
 def run_all_tests():
     """Chạy tất cả tests"""
     framework = TestFramework()
-    
+
     # Thêm tests
     framework.add_test("Basic Test", test_basic)
     framework.add_test("Error Handling", test_error_handling)
-    
+
     # Chạy tests
     return framework.run_tests()
 
